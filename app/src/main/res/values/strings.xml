@@ -22,5 +22,7 @@
     <string name="enter_principle">Enter Principle</string>
     <string name="enter_tenure">Enter Tenure (Months)</string>
     <string name="edit_text_error">Empty input</string>
+    <string name="emi">EMI</string>
+    <string name="total">Total</string>
 
 </resources>

@@ -25,7 +25,6 @@ import saha.joydeep.emicalculator.listener.RecyclerItemClickListener;
 import saha.joydeep.emicalculator.realm.RealmLoan;
 import saha.joydeep.emicalculator.realm.RealmSingleton;
 import saha.joydeep.emicalculator.realm.RealmUser;
-import saha.joydeep.emicalculator.ui.LoginActivity;
 import saha.joydeep.emicalculator.ui.loanDetail.LoanDetailActivity;
 
 /**
@@ -176,8 +175,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
                 bottomSheetDialog.dismiss();
                 loadData();
                 Intent i = new Intent(MainActivity.this, LoanDetailActivity.class);
-                i.putExtra("principle", principle);
-                i.putExtra("tenure", tenure);
+                i.putExtra("principle", Double.parseDouble(principle));
+                i.putExtra("tenure", Double.parseDouble(tenure));
                 startActivity(i);
             }
         });

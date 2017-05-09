@@ -8,7 +8,7 @@ public class LoanDetailItem {
 
     public double tenure, interestPerMonth, totalPayable;
 
-    LoanDetailItem(double tenure, double interestPerMonth, double totalPayable) {
+    public LoanDetailItem(double tenure, double interestPerMonth, double totalPayable) {
         this.tenure = tenure;
         this.interestPerMonth = interestPerMonth;
         this.totalPayable = totalPayable;

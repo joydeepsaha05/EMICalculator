@@ -26,13 +26,15 @@ public class LoanDetailAdapter extends RecyclerView.Adapter<LoanDetailAdapter.Vi
     @Override
     public LoanDetailAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.item_main_activity, parent, false);
+                R.layout.item_loan_detail, parent, false);
         return new LoanDetailAdapter.ViewHolder(itemLayoutView);
     }
 
     @Override
     public void onBindViewHolder(final LoanDetailAdapter.ViewHolder viewHolder, int position) {
-
+        viewHolder.tenure.setText(String.valueOf(items.get(position).tenure));
+        viewHolder.emi.setText(String.format("%.2f", items.get(position).interestPerMonth));
+        viewHolder.total.setText(String.format("%.2f", items.get(position).totalPayable));
     }
 
     @Override
@@ -42,12 +44,13 @@ public class LoanDetailAdapter extends RecyclerView.Adapter<LoanDetailAdapter.Vi
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title;
+        TextView tenure, emi, total;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            title = (TextView) itemLayoutView.findViewById(R.id.title);
-
+            tenure = (TextView) itemLayoutView.findViewById(R.id.tv_tenure);
+            emi = (TextView) itemLayoutView.findViewById(R.id.tv_emi);
+            total = (TextView) itemLayoutView.findViewById(R.id.tv_total);
         }
     }
 }
