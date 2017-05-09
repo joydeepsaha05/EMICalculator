@@ -72,8 +72,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, this));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new MainActivityAdapter(mRealmLoanList);
-        mRecyclerView.setAdapter(mAdapter);
 
         loadData();
     }
@@ -107,9 +105,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
                 .findFirst();
 
         if (realmUser != null) {
-            if (realmUser.loanRealmList == null) {
-                realmUser.loanRealmList = new RealmList<>();
-            }
             mRealmLoanList = realmUser.loanRealmList;
         } else {
             mRealmLoanList = new RealmList<>();
@@ -118,10 +113,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
         if (mRealmLoanList.size() == 0) {
             mDefaultTV.setVisibility(View.VISIBLE);
         } else {
+            if (mAdapter == null) {
+                mAdapter = new MainActivityAdapter(mRealmLoanList);
+                mRecyclerView.setAdapter(mAdapter);
+            } else {
+                mAdapter.notifyDataSetChanged();
+            }
             mDefaultTV.setVisibility(View.GONE);
         }
-
-        mAdapter.notifyDataSetChanged();
     }
 
     private void addLoan() {
@@ -173,7 +172,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
                     }
                 });
                 bottomSheetDialog.dismiss();
-                loadData();
                 Intent i = new Intent(MainActivity.this, LoanDetailActivity.class);
                 i.putExtra("principle", Double.parseDouble(principle));
                 i.putExtra("tenure", Double.parseDouble(tenure));

@@ -36,6 +36,7 @@ public class LoanDetailActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new LoanDetailAdapter(mArrayList);
