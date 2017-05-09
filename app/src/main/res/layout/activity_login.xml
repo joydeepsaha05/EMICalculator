@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:truesdk="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_text_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_name"
+        android:layout_marginTop="100dp"
+        android:background="#3B4148"
+        android:hint="@string/hint_phone_number"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColorHint="#999999" />
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text_phone"
+        android:layout_marginTop="20dp"
+        android:background="#3B5998"
+        android:text="@string/sign_in" />
+
+    <com.truecaller.android.sdk.TrueButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        truesdk:theme="@style/Theme.AppCompat.Light"
+        truesdk:truebutton_text="cont" />
+
+    <TextView
+        android:id="@+id/tv_true_not_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/install_truecaller"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

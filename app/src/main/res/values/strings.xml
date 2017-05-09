@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EMI Calculator</string>
+
+    <!-- TrueCaller SDK Partner Key -->
+    <string name="partnerKey">ydGMGd9349d3cec9a4624b65bce4d6e9e97f0</string>
+
+    <!-- Login Activity -->
+    <string name="install_truecaller">Truecaller not installed</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="enter_valid_number">Enter a valid phone number!</string>
+
+    <!-- Main Activity -->
+    <string name="main_activity_default">No previous loan details found</string>
+    <string name="add">Add</string>
+
+    <!-- Loan Detail Activity -->
+    <string name="loan_detail">Loan Details</string>
+    <string name="go">GO</string>
+    <string name="tenure">Tenure</string>
+    <string name="principle">Principle</string>
+    <string name="enter_principle">Enter Principle</string>
+    <string name="enter_tenure">Enter Tenure (Months)</string>
+    <string name="edit_text_error">Empty input</string>
+
+</resources>
