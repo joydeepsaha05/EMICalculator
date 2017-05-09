@@ -10,3 +10,6 @@ An EMI calculator app for Android, implements the Truecaller SDK for login.
 
 ### Compatible with
 Android 4.0.3 (API Level 15) - Android 7.1 (API Level 25)
+
+### Download
+https://github.com/joydeepsaha05/EMICalculator/releases/download/v1.0/EMI-Calc.apk
