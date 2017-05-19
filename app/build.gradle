@@ -7,7 +7,7 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
 
     signingConfigs {
         config {
@@ -66,4 +66,9 @@ dependencies {
     // https://github.com/JakeWharton/butterknife
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    // https://firebase.google.com/docs/database/android/start
+    compile 'com.google.firebase:firebase-database:10.2.6'
 }
+
+apply plugin: 'com.google.gms.google-services'

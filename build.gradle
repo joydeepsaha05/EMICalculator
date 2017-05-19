@@ -5,10 +5,12 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.android.tools.build:gradle:2.3.2'
 
         // Realm https://realm.io/docs/java/latest/
         classpath "io.realm:realm-gradle-plugin:3.1.4"
+
+        classpath 'com.google.gms:google-services:3.0.0'
     }
 }
 
